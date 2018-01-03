@@ -6,6 +6,7 @@
  * Time: 下午2:31
  */
 
+/*
 $str = '中文';
 
 //对于utf-8的
@@ -28,4 +29,19 @@ $pattern = '/^139\d{8}$/';
 preg_match($pattern, $str, $match);
 
 
+//var_dump($match);
+*/
+
+//取出页面中所有img标签的src值
+
+
+$str = '<img alt="高清无码" id="video" src="img.baidu.com" />';
+
+//加?即取消贪婪模式
+$pattern = '/<img.*?src="(.*?)".*?\/?>/i';
+
+preg_match($pattern,$str,$match);
 var_dump($match);
+
+
+
